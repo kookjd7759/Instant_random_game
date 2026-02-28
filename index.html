@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>룰렛</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <h1>룰렛</h1>
+
+    <section class="panel">
+      <div class="wheel-wrap">
+        <canvas id="wheel" width="420" height="420"></canvas>
+        <div class="pointer" aria-hidden="true"></div>
+      </div>
+
+      <div class="controls">
+        <textarea id="items" rows="10" placeholder="한 줄에 하나씩 입력&#10;예) 아메리카노&#10;예) 벌칙: 팔굽혀펴기 10개"></textarea>
+        <div class="row">
+          <button id="save">저장</button>
+          <button id="load">불러오기</button>
+          <button id="shuffle">섞기</button>
+        </div>
+        <button id="spin" class="primary">돌리기</button>
+
+        <div class="result">
+          결과: <span id="resultText">-</span>
+        </div>
+      </div>
+    </section>
+
+    <p class="hint">※ 저장/불러오기는 이 브라우저(LocalStorage)에만 저장돼.</p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

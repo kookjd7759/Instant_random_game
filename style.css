@@ -1,0 +1,63 @@
+:root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Apple SD Gothic Neo, "Noto Sans KR", sans-serif; }
+body { margin: 0; background: #0b0f17; color: #e8eefc; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 28px 16px 40px; }
+h1 { margin: 0 0 18px; font-size: 28px; }
+
+.panel {
+  display: grid;
+  grid-template-columns: 460px 1fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.wheel-wrap { position: relative; width: 420px; height: 420px; }
+#wheel { border-radius: 50%; box-shadow: 0 12px 40px rgba(0,0,0,.45); background: #11192b; }
+.pointer {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0; height: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-bottom: 26px solid #ffcc00;
+  filter: drop-shadow(0 8px 10px rgba(0,0,0,.5));
+}
+
+.controls textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.06);
+  color: #e8eefc;
+  resize: vertical;
+}
+
+.row { display: flex; gap: 10px; margin: 10px 0; }
+button {
+  cursor: pointer;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.08);
+  color: #e8eefc;
+}
+button:hover { background: rgba(255,255,255,.12); }
+button.primary {
+  width: 100%;
+  font-weight: 700;
+  background: #4c7dff;
+  border-color: rgba(0,0,0,.2);
+}
+button.primary:hover { background: #3f6fff; }
+
+.result { margin-top: 12px; font-size: 16px; }
+#resultText { font-weight: 800; }
+.hint { opacity: .7; margin-top: 12px; font-size: 13px; }
+
+@media (max-width: 920px) {
+  .panel { grid-template-columns: 1fr; }
+  .wheel-wrap { margin: 0 auto; }
+}
